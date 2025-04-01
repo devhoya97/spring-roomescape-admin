@@ -42,19 +42,19 @@ values ('hotea', 'hotea@google.com', '1234', 'USER', CURRENT_TIMESTAMP, CURRENT_
 
 -- reservation 데이터 삽입
 insert into reservation (member_id, slot_id, status, created_date, last_modified_date)
-values (1, 1, 'RESERVED', DATEADD(SECOND, -100, CURRENT_TIMESTAMP), DATEADD(SECOND, -100, CURRENT_TIMESTAMP));
+values (1, 1, 'RESERVED', DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 100 SECOND), DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 100 SECOND));
 
 -- 같은 날짜, 같은 시간, 다른 테마
 insert into reservation (member_id, slot_id, status, created_date, last_modified_date)
-values (2, 2, 'RESERVED', DATEADD(SECOND, -99, CURRENT_TIMESTAMP), DATEADD(SECOND, -99, CURRENT_TIMESTAMP));
+values (2, 2, 'RESERVED', DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 99 SECOND), DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 99 SECOND));
 
 -- 같은 날짜, 다른 시간, 같은 테마
 insert into reservation (member_id, slot_id, status, created_date, last_modified_date)
-values (3, 3, 'RESERVED', DATEADD(SECOND, -98, CURRENT_TIMESTAMP), DATEADD(SECOND, -98, CURRENT_TIMESTAMP));
+values (3, 3, 'RESERVED', DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 98 SECOND), DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 98 SECOND));
 
 -- WAITING 상태 데이터
 insert into reservation (member_id, slot_id, status, created_date, last_modified_date)
-values (2, 1, 'WAITING', DATEADD(SECOND, -97, CURRENT_TIMESTAMP), DATEADD(SECOND, -97, CURRENT_TIMESTAMP));
+values (2, 1, 'WAITING', DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 97 SECOND), DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 97 SECOND));
 
 insert into reservation (member_id, slot_id, status, created_date, last_modified_date)
-values (3, 1, 'WAITING', DATEADD(SECOND, -96, CURRENT_TIMESTAMP), DATEADD(SECOND, -96, CURRENT_TIMESTAMP));
+values (3, 1, 'WAITING', DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 96 SECOND), DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 96 SECOND));

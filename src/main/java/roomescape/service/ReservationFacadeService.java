@@ -25,6 +25,7 @@ public class ReservationFacadeService {
         if (ReservationStatus.findByViewName(request.status()) == ReservationStatus.RESERVED) {
             return createReservedReservation(request, member);
         }
+        // 처음부터 대기 요청이 온 경우 아래 메서드가 수행됩니다.
         return reservationService.createWaitingReservation(request, member);
     }
 

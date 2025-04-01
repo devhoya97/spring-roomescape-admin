@@ -1,3 +1,5 @@
+-- TODO: schema.sql이 현재 실행되지 않음. 실행시키는 법 알아내기.
+
 drop table if exists reservation;
 drop table if exists reservation_slot;
 drop table if exists reservation_time;

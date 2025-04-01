@@ -1,3 +1,5 @@
+-- TODO: data.sql이 현재 실행되지 않음. 실행시키는 법 알아내기
+
 -- reservation_time 데이터 삽입
 insert into reservation_time (start_at, created_date, last_modified_date)
 values ('10:00', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
